@@ -56,7 +56,6 @@ public class OrderEntryControllor {
         if (cid == null || cid.equalsIgnoreCase("") || cid.equalsIgnoreCase("all")) {
             cid = "%";
         }
-        
         HttpSession session = request.getSession();
         String sessionId = session.getId();
         model.addAttribute("menus", menuManager.getMenusByMidCid(mid, cid));
